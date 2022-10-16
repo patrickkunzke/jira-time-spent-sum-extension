@@ -1,0 +1,10 @@
+.time-spent-sum {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    
+    font-size: 11px;
+    text-transform: lowercase;
+}
