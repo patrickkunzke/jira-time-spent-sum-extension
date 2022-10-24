@@ -15,10 +15,10 @@
         <img src="images/icon-128.png" alt="Logo" width="80" height="80">
         </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Jira Time Spent Sum Chrome Extension</h3>
 
 <p align="center">
-    project_description
+    Add the time spent sum of all displayed tickets in the time spent column header.
     <br />
     <a href="https://github.com/patrickkunzke/jira-time-spent-sum-extension"><strong>Explore the docs »</strong></a>
     <br />
