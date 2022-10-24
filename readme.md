@@ -63,7 +63,7 @@ To use this extension, just install it via the Chrome Web Store. Afterwards it w
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This extension works only in Jira cloud with the default Atlassian URL scheme. As soon as you are on the issues view and have the "Time Spent" column in your table, the sum will be added. The sum contains only the values of the currently displayed issues, meaning all issues on the current page. If you want to see the sum of all issues resulting from your search query, you can use the bulk edit view, where the sum will also be added to the column header.
+This extension works only in Jira cloud with the default Atlassian URL scheme and if the language is set to English. As soon as you are on the issues view and have the "Time Spent" column in your table, the sum will be added. The sum contains only the values of the currently displayed issues, meaning all issues on the current page. If you want to see the sum of all issues resulting from your search query, you can use the bulk edit view, where the sum will also be added to the column header.
 
 <!-- CONTRIBUTING -->
 ## Contributing
