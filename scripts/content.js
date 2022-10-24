@@ -1,19 +1,27 @@
 (function () {
     let timeSpentHeader;
+    let issueTable;
+    let observer;
     const estimationFormats = ["week", "day", "hour", "minutes"];
     const shortEstimationFormats = ["w", "d", "h", "m"];
 
     const JiraTimeSpentSum = {
-        init: function() {
+        init: function () {
             this.setupTableHeader();
+            this.setupIssueTable();
             this.injectTimeSpentSum();
+            this.observeDOM();
         },
 
-        setupTableHeader: function() {
+        setupTableHeader: function () {
             timeSpentHeader = document.querySelector(".headerrow-timespent");
         },
 
-        injectTimeSpentSum: function() {
+        setupIssueTable: function () {
+            issueTable = document.querySelector(".navigator-content");
+        },
+
+        injectTimeSpentSum: function () {
             // `document.querySelector` may return null if the selector doesn't match anything.
             if (timeSpentHeader) {
                 const timeSpentSumNode = document.createElement("aui-badge");
@@ -25,7 +33,7 @@
             }
         },
 
-        getSpentTime: function() {
+        getSpentTime: function () {
             const timeSpentCells = Array.from(document.querySelectorAll(".timespent"));
 
             const timeSpentEntries = timeSpentCells.map((cell) => {
@@ -37,8 +45,8 @@
 
                 entry.split(", ").forEach((segment) => {
                     const timeSegment = estimationFormats.filter(
-                            (char) => segment.includes(char)
-                            );
+                        (char) => segment.includes(char)
+                    );
 
                     if (timeSegment.length > 0) {
                         const timeValue = segment.split(timeSegment)[0];
@@ -64,19 +72,19 @@
             });
 
             // Rename object keys
-            if(laneEstimates["week"]) {
+            if (laneEstimates["week"]) {
                 delete Object.assign(laneEstimates, {w: laneEstimates.week})["week"];
             }
 
-            if(laneEstimates["day"]) {
+            if (laneEstimates["day"]) {
                 delete Object.assign(laneEstimates, {d: laneEstimates.day})["day"];
             }
 
-            if(laneEstimates["hour"]) {
+            if (laneEstimates["hour"]) {
                 delete Object.assign(laneEstimates, {h: laneEstimates.hour})["hour"];
             }
 
-            if(laneEstimates["minutes"]) {
+            if (laneEstimates["minutes"]) {
                 delete Object.assign(laneEstimates, {m: laneEstimates.minutes})["minutes"];
             }
 
@@ -128,6 +136,35 @@
             }
 
             return formattedSum;
+        },
+
+        observeDOM: function () {
+            // Options for the observer
+            const config = {attributes: false, childList: true, subtree: false};
+
+            // Callback function to execute when mutations are observed
+            const callback = (mutations) => {
+                mutations.forEach(mutation => {
+                    if (mutation.type === "childList" && mutation.removedNodes[0]?.className === "pending") {
+                        this.stopObserveDom();
+                        setTimeout(() => {
+                            this.init();
+                        }, 200)
+                    }
+                })
+            }
+
+            if (issueTable) {
+                // Create observer instance linked to callback function
+                observer = new MutationObserver(callback);
+
+                // Start observing
+                observer.observe(issueTable, config);
+            }
+        },
+
+        stopObserveDom: function () {
+            observer?.disconnect();
         }
     }
 
