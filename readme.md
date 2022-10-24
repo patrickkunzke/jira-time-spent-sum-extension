@@ -55,21 +55,15 @@
 
 This is a simple Chrome extension to add the time spent sum of all displayed issues in Jira to the header column. The screenshot above should be enough to explain the functionality.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
 To use this extension, just install it via the Chrome Web Store. Afterwards it will automatically work on the supported pages.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 This extension works only in Jira cloud with the default Atlassian URL scheme. As soon as you are on the issues view and have the "Time Spent" column in your table, the sum will be added. The sum contains only the values of the currently displayed issues, meaning all issues on the current page. If you want to see the sum of all issues resulting from your search query, you can use the bulk edit view, where the sum will also be added to the column header.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -85,18 +79,10 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -106,7 +92,6 @@ Patrick Kunzke - [@patrickkunzke](https://twitter.com/patrickkunzke) - hello@pat
 Project Link: [https://github.com/patrickkunzke/jira-time-spent-sum-extension](https://github.com/patrickkunzke/jira-time-spent-sum-extension)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
