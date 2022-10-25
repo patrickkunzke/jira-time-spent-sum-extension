@@ -23,7 +23,7 @@
     <a href="https://github.com/patrickkunzke/jira-time-spent-sum-extension"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/patrickkunzke/jira-time-spent-sum-extension">Chrome Web Store</a>
+    <a href="https://chrome.google.com/webstore/detail/jira-time-spent-sum/ikhogdpopknkbbjnpfmclcckfdbdeped">Chrome Web Store</a>
     ·
     <a href="https://github.com/patrickkunzke/jira-time-spent-sum-extension/issues">Report Bug</a>
     ·
@@ -58,7 +58,7 @@ This is a simple Chrome extension to add the time spent sum of all displayed iss
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To use this extension, just install it via the Chrome Web Store. Afterwards it will automatically work on the supported pages.
+To use this extension, just install it via the [Chrome Web Store](https://chrome.google.com/webstore/detail/jira-time-spent-sum/ikhogdpopknkbbjnpfmclcckfdbdeped). Afterwards it will automatically work on the supported pages.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
